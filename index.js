@@ -107,6 +107,7 @@ app.get('/api/persons', (req, res) => {
     res.json(persons)
 })
 
-const PORT = 3001;
-app.listen(PORT);
-console.log(`listening on port ${PORT}`);
+const PORT = process.env || 3001;
+app.listen(() => {
+    console.log(`listening on port ${PORT}`);
+});
