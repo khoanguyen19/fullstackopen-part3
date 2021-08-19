@@ -9,6 +9,7 @@ morgan.token("body", (req, res) => {
 })
 
 app.use(express.json());
+app.use(express.static('build'));
 app.use(cors());
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
 
@@ -107,7 +108,7 @@ app.get('/api/persons', (req, res) => {
     res.json(persons)
 })
 
-const PORT = process.env || 3001;
-app.listen(() => {
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
