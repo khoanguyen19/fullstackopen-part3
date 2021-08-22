@@ -2,7 +2,17 @@ GET http://localhost:3001/api/persons HTTP/1.1
 
 ###
 
-DELETE http://localhost:3001/api/persons/0 HTTP/1.1
+DELETE http://localhost:3001/api/persons/612095b62c372e27386a1e1a HTTP/1.1
+
+###
+
+PUT http://localhost:3001/api/persons/6121f2613646e61310904aea HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Rock Nguyen",
+    "number": "0123747412"
+}
 
 ###
 
